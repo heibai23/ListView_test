@@ -56,5 +56,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             Intent toast_intent=new Intent(this,ToastAcitvity.class);
             startActivity(toast_intent);
         }
+        if(position==2){
+            Intent alertDialot_intent=new Intent(this,AlertDialogActivity.class);
+            startActivity(alertDialot_intent);
+        }
     }
 }

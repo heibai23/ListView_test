@@ -18,6 +18,9 @@
         <activity android:name=".ToastAcitvity">
 
         </activity>
+        <activity android:name=".AlertDialogActivity">
+
+        </activity>
     </application>
 
 </manifest>
