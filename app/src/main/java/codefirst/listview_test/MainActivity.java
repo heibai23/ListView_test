@@ -1,13 +1,16 @@
 package codefirst.listview_test;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private String iconName_res[]={"通讯录","漂亮","日历","相机","闹钟","游戏",
             "短信","音乐","河流","设置","气球","天气","地图","视频"};   //名称数据源
@@ -27,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         initData();
         initAdapter();
         listItem_lv= (ListView) findViewById(R.id.lv_main);
-        listItem_lv.setAdapter(adapter);
+        listItem_lv.setAdapter(adapter);        //加载适配器
+        listItem_lv.setOnItemClickListener(this);
 
     }
 
@@ -45,5 +49,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
+        if(position==1){
+            Intent toast_intent=new Intent(this,ToastAcitvity.class);
+            startActivity(toast_intent);
+        }
+    }
 }
