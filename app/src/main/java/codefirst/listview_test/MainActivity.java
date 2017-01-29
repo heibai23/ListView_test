@@ -60,5 +60,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             Intent alertDialot_intent=new Intent(this,AlertDialogActivity.class);
             startActivity(alertDialot_intent);
         }
+        if(position==3){
+            Intent notification_intent=new Intent(this,NotificationActivity.class);
+            startActivity(notification_intent);
+        }
     }
 }

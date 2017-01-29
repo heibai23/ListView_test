@@ -21,6 +21,9 @@
         <activity android:name=".AlertDialogActivity">
 
         </activity>
+        <activity android:name=".NotificationActivity">
+
+        </activity>
     </application>
 
 </manifest>
